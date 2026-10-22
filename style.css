@@ -1,0 +1,371 @@
+
+:root {
+  --color-primary: #F5F5DC;    /* beige: page background (dominant) */
+  --color-secondary: #FBC02D;  /* golden yellow: highlight boxes */
+  --color-accent: #FF8F00;     /* orange: buttons, socials, accents */
+  --color-highlight: #C62828;  /* deep red: strongest call to action */
+  --color-text: #29251F;
+  --color-surface: #FFFFFF;
+
+  --radius: 28px;
+  --gap: 16px;
+  --border: 2px solid var(--color-text);
+}
+
+/* ---------- Basics ---------- */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: var(--color-primary);
+  color: var(--color-text);
+  font-family: "Segoe UI", system-ui, -apple-system, Roboto, Arial, sans-serif;
+  font-size: 1rem;
+  line-height: 1.55;
+}
+
+h1, h2, h3, p, ul, blockquote {
+  margin: 0;
+}
+
+h2 {
+  font-size: 1.35rem;
+  line-height: 1.2;
+  margin-bottom: 0.75rem;
+}
+
+h3 {
+  font-size: 1rem;
+  margin-bottom: 0.25rem;
+}
+
+p + p {
+  margin-top: 0.6rem;
+}
+
+ul {
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  color: inherit;
+}
+
+a:focus-visible {
+  outline: 3px solid var(--color-highlight);
+  outline-offset: 3px;
+}
+
+/* ---------- Page layout (3 columns) ---------- */
+
+.bento {
+  display: grid;
+  grid-template-columns: 1fr 1.7fr 1fr;
+  gap: var(--gap);
+  align-items: stretch;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: var(--gap);
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap);
+}
+
+/* ---------- Cards (the bento boxes) ---------- */
+
+.card {
+  background-color: var(--color-surface);
+  border: var(--border);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+}
+
+/* Cards with this class stretch to fill leftover column height */
+.card--grow {
+  flex-grow: 1;
+}
+
+.card--gold {
+  background-color: var(--color-secondary);
+}
+
+.card--orange {
+  background-color: var(--color-accent);
+}
+
+.card--red {
+  background-color: var(--color-highlight);
+  color: var(--color-primary);
+}
+
+/* ---------- Column 1 ---------- */
+
+.card--photo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+
+.avatar {
+  width: 100%;
+  max-width: 260px;
+  height: auto;
+}
+
+/* If you swap in a real <img>, these rules style it */
+.card--photo img {
+  width: 100%;
+  max-width: 260px;
+  height: auto;
+  border-radius: var(--radius);
+}
+
+.socials {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.socials a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  background-color: var(--color-primary);
+  border: var(--border);
+  border-radius: 50%;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.socials a:hover {
+  background-color: var(--color-surface);
+}
+
+.timeline li + li {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px dashed var(--color-text);
+}
+
+.timeline span {
+  display: block;
+  font-size: 0.9rem;
+}
+
+.timeline p {
+  margin-top: 0.25rem;
+  font-size: 0.95rem;
+}
+
+/* ---------- Column 2 ---------- */
+
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.skill {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 68px;
+  height: 68px;
+  background-color: var(--color-primary);
+  border: var(--border);
+  border-radius: 50%;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.skill--gold {
+  background-color: var(--color-secondary);
+}
+
+.skill--orange {
+  background-color: var(--color-accent);
+}
+
+.skill--red {
+  background-color: var(--color-highlight);
+  color: var(--color-primary);
+}
+
+.services li {
+  padding: 1rem;
+  background-color: var(--color-primary);
+  border: var(--border);
+  border-radius: 18px;
+}
+
+.services li + li {
+  margin-top: 0.75rem;
+}
+
+.services p {
+  font-size: 0.95rem;
+}
+
+.note {
+  margin-top: 1rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.projects {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--gap);
+}
+
+.project {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--color-primary);
+  border: var(--border);
+  border-radius: 20px;
+  padding: 1.25rem;
+}
+
+.project p {
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
+}
+
+.project a {
+  margin-top: auto;
+  font-weight: 700;
+}
+
+.project--gold {
+  background-color: var(--color-secondary);
+}
+
+.project--orange {
+  background-color: var(--color-accent);
+}
+
+.project--red {
+  background-color: var(--color-highlight);
+  color: var(--color-primary);
+}
+
+/* ---------- Column 3 ---------- */
+
+blockquote p {
+  font-size: 1.1rem;
+  font-style: italic;
+}
+
+blockquote footer {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+.button {
+  display: inline-block;
+  padding: 0.7rem 1.4rem;
+  border: var(--border);
+  border-radius: 999px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.card--red .button {
+  margin-top: 1rem;
+}
+
+.button--light {
+  background-color: var(--color-primary);
+  color: var(--color-text);
+}
+
+.button--orange {
+  background-color: var(--color-accent);
+  color: var(--color-text);
+}
+
+.button--outline {
+  background-color: var(--color-primary);
+  color: var(--color-text);
+}
+
+.button:hover {
+  background-color: var(--color-secondary);
+}
+
+.card--red a:focus-visible {
+  outline-color: var(--color-primary);
+}
+
+/* ---------- Footer ---------- */
+
+.site-footer {
+  padding: 1rem var(--gap) 2rem;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+/* =========================================================
+   TABLET (up to 1024px): 2 columns
+   Left and right columns sit side by side,
+   the main column goes full width underneath.
+   ========================================================= */
+
+@media (max-width: 1024px) {
+  .bento {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .column--main {
+    grid-column: 1 / -1;
+    order: 3;
+  }
+}
+
+/* =========================================================
+   MOBILE (up to 640px): everything in one column
+   ========================================================= */
+
+@media (max-width: 640px) {
+  .bento {
+    grid-template-columns: 1fr;
+    padding: 12px;
+    gap: 12px;
+  }
+
+  .column {
+    gap: 12px;
+  }
+
+  .column--main {
+    order: 0;
+  }
+
+  .card {
+    padding: 1.25rem;
+    border-radius: 22px;
+  }
+
+  .projects {
+    grid-template-columns: 1fr;
+  }
+}

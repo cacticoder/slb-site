@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>cacti-coder | Developer Portfolio</title>
+  <meta name="description" content="Portfolio of cacti-coder, a developer building useful tools for forestry and forest products research in the Philippines.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!--
+    LAYOUT NOTES
+    The page has 3 columns (like your sketch):
+      1. column--left   : photo, about, socials, work experience
+      2. column--main   : proficiency, services, projects
+      3. column--right  : work with me, testimonial, contact
+    Each box is a <section> or <article> with the class "card".
+    To change a box's color, swap its modifier class:
+    card--gold, card--orange, card--red, or no modifier for white.
+  -->
+
+  <main class="bento">
+
+    <!-- ========== COLUMN 1 ========== -->
+    <div class="column column--left">
+
+      <!-- Photo -->
+      <section class="card card--gold card--photo" aria-label="Profile photo">
+        <!-- Replace this SVG with your own photo:
+             <img src="your-photo.jpg" alt="Photo of cacti-coder">
+             (You would add the photo file next to index.html.) -->
+        <svg class="avatar" viewBox="0 0 200 200" role="img" aria-label="Profile photo placeholder">
+          <circle cx="100" cy="72" r="38" fill="#F5F5DC" stroke="#29251F" stroke-width="3"/>
+          <path d="M26 190c0-42 33-70 74-70s74 28 74 70z" fill="#F5F5DC" stroke="#29251F" stroke-width="3"/>
+        </svg>
+      </section>
+
+      <!-- About me -->
+      <section class="card" aria-labelledby="about-title">
+        <h2 id="about-title">About me</h2>
+        <p>Hi, I'm cacti-coder. I build web tools and prototypes for forestry and forest products research at DOST-FPRDI in the Philippines.</p>
+        <p>I like turning slow, manual processes into simple software that people actually use.</p>
+      </section>
+
+      <!-- Socials -->
+      <section class="card card--orange" aria-labelledby="socials-title">
+        <h2 id="socials-title">Socials</h2>
+        <ul class="socials">
+          <li><a href="#" aria-label="GitHub">GH</a></li>
+          <li><a href="#" aria-label="LinkedIn">in</a></li>
+          <li><a href="#" aria-label="Facebook">fb</a></li>
+          <li><a href="#" aria-label="X">X</a></li>
+        </ul>
+      </section>
+
+      <!-- Current work / work experience -->
+      <section class="card card--grow" aria-labelledby="work-title">
+        <h2 id="work-title">Current work</h2>
+        <h3>Work experience</h3>
+        <ul class="timeline">
+          <li>
+            <strong>Developer and researcher</strong>
+            <span>DOST-FPRDI, Philippines</span>
+            <p>Building tools for timber legality, research communication, and image analysis.</p>
+          </li>
+          <li>
+            <strong>Freelance web developer</strong>
+            <span>Independent</span>
+            <p>Landing pages and small web apps for local clients.</p>
+          </li>
+        </ul>
+      </section>
+
+    </div>
+
+    <!-- ========== COLUMN 2 ========== -->
+    <div class="column column--main">
+
+      <!-- Proficiency -->
+      <section class="card" aria-labelledby="skills-title">
+        <h2 id="skills-title">Proficiency</h2>
+        <ul class="skills">
+          <li class="skill">HTML</li>
+          <li class="skill skill--gold">CSS</li>
+          <li class="skill skill--orange">JS</li>
+          <li class="skill skill--red">SQL</li>
+          <li class="skill">Git</li>
+          <li class="skill skill--gold">Supabase</li>
+          <li class="skill skill--orange">AI</li>
+        </ul>
+      </section>
+
+      <!-- Services -->
+      <section class="card card--grow" aria-labelledby="services-title">
+        <h2 id="services-title">Services</h2>
+        <ul class="services">
+          <li>
+            <h3>Web app development</h3>
+            <p>Dashboards, forms, and data tools built on Supabase and plain web technology.</p>
+          </li>
+          <li>
+            <h3>Research tools and prototypes</h3>
+            <p>Turn a lab or field workflow into a working proof of concept.</p>
+          </li>
+          <li>
+            <h3>Landing pages and portfolios</h3>
+            <p>Clear, fast, mobile-friendly sites for people and programs.</p>
+          </li>
+        </ul>
+        <p class="note">Not sure what you need? Send a message and we can scope it together.</p>
+      </section>
+
+      <!-- Projects / case studies -->
+      <section class="card" aria-labelledby="projects-title">
+        <h2 id="projects-title">Projects and case studies</h2>
+        <div class="projects">
+
+          <article class="project project--gold">
+            <h3>Timber legality checker</h3>
+            <p>DNA-based timber verification software for the Philippine market.</p>
+            <a href="#">Read the case study</a>
+          </article>
+
+          <article class="project project--orange">
+            <h3>Program roadmap infographic</h3>
+            <p>A visual roadmap that makes a research program easy to present.</p>
+            <a href="#">Read the case study</a>
+          </article>
+
+          <article class="project project--red">
+            <h3>Handmade paper brochure</h3>
+            <p>A tri-fold redesign for a government laboratory.</p>
+            <a href="#">Read the case study</a>
+          </article>
+
+          <article class="project">
+            <h3>Pulp fiber image analysis</h3>
+            <p>Exploring real-time microscope image analysis for fiber classification.</p>
+            <a href="#">Read the case study</a>
+          </article>
+
+        </div>
+      </section>
+
+    </div>
+
+    <!-- ========== COLUMN 3 ========== -->
+    <div class="column column--right">
+
+      <!-- Work with me -->
+      <section class="card card--red" aria-labelledby="hire-title">
+        <h2 id="hire-title">Work with me?</h2>
+        <p>I'm open to collaborations and new projects.</p>
+        <a class="button button--light" href="#contact">Start a project</a>
+      </section>
+
+      <!-- Testimonial -->
+      <section class="card card--gold card--grow" aria-labelledby="testimonial-title">
+        <h2 id="testimonial-title">Testimonial</h2>
+        <blockquote>
+          <p>Replace this with a short, real quote from a colleague or client about what it was like to work with you.</p>
+          <footer>Name, Role, Organization</footer>
+        </blockquote>
+      </section>
+
+      <!-- Contact -->
+      <section class="card card--grow" id="contact" aria-labelledby="contact-title">
+        <h2 id="contact-title">Contact</h2>
+        <p>The fastest way to reach me is by email or message.</p>
+        <div class="buttons">
+          <a class="button button--orange" href="mailto:you@example.com">Email</a>
+          <a class="button button--outline" href="#">Message</a>
+        </div>
+      </section>
+
+    </div>
+
+  </main>
+
+  <footer class="site-footer">
+    <p>Built with HTML and CSS by cacti-coder.</p>
+  </footer>
+
+</body>
+</html>
